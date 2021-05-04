@@ -1,19 +1,19 @@
 
 /**
- * Beschreiben Sie hier die Klasse SCOREBOARD.
+ * Beschreiben Sie hier die Klasse FRAGE3.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class SCOREBOARD
+public class FRAGE3
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse SCOREBOARD
+     * Konstruktor für Objekte der Klasse FRAGE3
      */
-    public SCOREBOARD()
+    public FRAGE3()
     {
         // Instanzvariable initialisieren
         x = 0;

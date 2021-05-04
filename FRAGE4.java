@@ -1,19 +1,19 @@
 
 /**
- * Beschreiben Sie hier die Klasse JOKER.
+ * Beschreiben Sie hier die Klasse FRAGE4.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class JOKER
+public class FRAGE4
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse JOKER
+     * Konstruktor für Objekte der Klasse FRAGE4
      */
-    public JOKER()
+    public FRAGE4()
     {
         // Instanzvariable initialisieren
         x = 0;
