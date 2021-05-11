@@ -2,8 +2,7 @@
 
  class SPIEL
 {
-    SPIEL timer;
-    int i;
+   int i;
     
    SPIEL()
    {
