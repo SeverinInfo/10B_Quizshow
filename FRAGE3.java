@@ -1,33 +1,18 @@
 
-/**
- * Beschreiben Sie hier die Klasse FRAGE3.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
+
 public class FRAGE3
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    String Frage = "In welcher Einheit wird elektrischer Wiederstand gemessen?";
+    String Antf1 = "Volt";
+    String Antf2 = "Amper";
+    String Antf3 = "Ohm";
+    String Antf4 = "Watt";
+    
 
-    /**
-     * Konstruktor für Objekte der Klasse FRAGE3
-     */
+   
     public FRAGE3()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
 }

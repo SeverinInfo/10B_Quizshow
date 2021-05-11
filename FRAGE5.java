@@ -1,33 +1,18 @@
 
-/**
- * Beschreiben Sie hier die Klasse FRAGE5.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
+
 public class FRAGE5
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    String Frage = "Wie hoch ist die Mehrwertsteuer in Deutschland";
+    String Antf1 = "7%";
+    String Antf2 = "16%";
+    String Antf3 = "19%";
+    String Antf4 = "9%";
 
-    /**
-     * Konstruktor für Objekte der Klasse FRAGE5
-     */
+
     public FRAGE5()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+  
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
+
 }
