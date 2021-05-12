@@ -1,6 +1,6 @@
 
 
-public class FRAGE4
+public class FRAGE4 extends SPIEL
 {
     String Frage = "Wieviele Planeten hat unser Sonnensystem";
     String Antf1 = "13";

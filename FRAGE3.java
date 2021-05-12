@@ -1,6 +1,6 @@
 
 
-public class FRAGE3
+public class FRAGE3 extends SPIEL
 {
     String Frage = "In welcher Einheit wird elektrischer Wiederstand gemessen?";
     String Antf1 = "Volt";

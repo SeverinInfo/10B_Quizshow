@@ -10,7 +10,7 @@
         i = 25;                     // startwert von i bei 25
    }
 
-     void runterzaehlen (int i)           //methode, die von 120 bsi 0 sekunden runterzählt (2min)
+     void runterzaehlen (int i)           //methode, die von 25 bsi 0 sekunden runterzählt 
     {
         for (i = 25; i >= 0; i--)
         {             

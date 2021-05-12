@@ -1,6 +1,6 @@
 
 
-public class FRAGE2
+public class FRAGE2 extends SPIEL
 {
     String Frage = "Wann fiel die Berliener Mauer";
     String Antf1 = "9.11.1989";

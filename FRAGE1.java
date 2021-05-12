@@ -1,6 +1,6 @@
 
 
-public class FRAGE1
+public class FRAGE1 extends SPIEL
 {
     String Frage = "Wofür steht die KGaA";
     String Antf1 = "Kaum Götter aßen Ameisen";
