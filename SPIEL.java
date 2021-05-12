@@ -3,17 +3,23 @@
  class SPIEL
 {
    int i;
-    
+   int l;
+   
+   
    SPIEL()
    {
         System.out.println(i);     // darstellung von i 
         i = 25;                     // startwert von i bei 25
    }
 
+   
+   
+   
+   
      void runterzaehlen (int i)           //methode, die von 25 bsi 0 sekunden runterzählt 
     {
         for (i = 25; i >= 0; i--)
-        {             
+         {             
         
              try
                  {
@@ -32,6 +38,6 @@
         
         
     
+         }
     }
-   }
 }

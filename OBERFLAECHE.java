@@ -8,14 +8,14 @@ import java.awt.event.*;
     Button buta;
     Button butb;
     Button butc;
-    Button butd;    
+    Button butd;
+    Button test;
     Label ansa;
     Label ansb;
     Label ansc;
     Label ansd;
-    
+    SPIEL timer;
     int i;
-    Label timerAnzeige;
     
     OBERFLAECHE()
     {
@@ -30,7 +30,9 @@ import java.awt.event.*;
         butb = new Button();
         butc = new Button();
         butd = new Button();
-        timerAnzeige = new Label();
+        
+        test = new Button();
+        
         
         fenster.add(buta);
         fenster.add(butb);
@@ -41,8 +43,8 @@ import java.awt.event.*;
         fenster.add(ansb);
         fenster.add(ansc);
         fenster.add(ansd);
-        fenster.add(timerAnzeige);
         
+        fenster.add(test);
         
         
         // das fenster des Quiz
@@ -106,22 +108,28 @@ import java.awt.event.*;
         butd.setLabel("D"); 
         butd.setEnabled(true);
         
+        
+        test.setSize(80, 50);
+        test.setLocation(1800, 100);
+        test.setVisible (true);
+        test.setLabel("test"); 
+        test.setEnabled(true);
+        //test.addActionListener(new ActionListener()
+         //
+           //public void actionPerformed(ActionEvent e)
+           //{
+           //    timer.runterzaehlen(25);
+          // }
+         // }
+        //); 
        
-        //timer 
-        timerAnzeige.setVisible(true);
-        //timerAnzeige.setText(i);
-        timerAnzeige.setLocation(1800, 100);
-        timerAnzeige.setSize(80, 50);
-        
-        
-        
-        
-        
-        
-        
-                                                          
+                              
     }
 
+     
+       
+    
+    
     void runterzaehlen (int i)           //methode, die von 25 bsi 0 sekunden runterzählt 
      {
         for (i = 25; i >= 0; i--)
@@ -136,18 +144,17 @@ import java.awt.event.*;
                     e.printStackTrace();
                  }
                  
-             //timerAnzeige.setText(i);    
-             //System.out.println(i);
+              
+             System.out.println(i);
              if (i == 0) {
-                timerAnzeige.setText("Zeit abgelaufen");
+                System.out.println("Zeit abgelaufen");
                }       
         
         
         
     
         }
-    }
-    
+    }  
     
     
     
