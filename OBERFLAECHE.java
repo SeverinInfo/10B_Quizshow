@@ -1,5 +1,7 @@
+import javax.swing.*;
 import java.awt. *;
 import java.awt.event.*;
+
  class OBERFLAECHE extends SPIEL
  
 {
@@ -14,12 +16,14 @@ import java.awt.event.*;
     Label ansb;
     Label ansc;
     Label ansd;
-    SPIEL timer;
-    int i;
+    SPIEL spiel;
+    
+    
+    
     
     OBERFLAECHE()
     {
-        i = 25;
+        spiel = new SPIEL();
         fenster = new Frame(); 
         fragen = new Label();
         ansa = new Label();
@@ -112,50 +116,41 @@ import java.awt.event.*;
         test.setSize(80, 50);
         test.setLocation(1800, 100);
         test.setVisible (true);
-        test.setLabel("test"); 
+        test.setLabel("Zeit:" + spiel.i); 
         test.setEnabled(true);
-        //test.addActionListener(new ActionListener()
-         //
-           //public void actionPerformed(ActionEvent e)
-           //{
-           //    timer.runterzaehlen(25);
-          // }
-         // }
-        //); 
+        
+        
+        test.addActionListener(new ActionListener() //nur kurzzeitig als Test, sonst geht das automatisch
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                runterzaehlen(25);
+                //test.setLabel("Zeit:" + spiel.i);
+            }
+        });
+         
        
-                              
+        fenster.addWindowListener(new WindowAdapter()
+        {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });                      
     }
 
      
-       
-    
-    
-    void runterzaehlen (int i)           //methode, die von 25 bsi 0 sekunden runterzählt 
+     void starten()
      {
-        for (i = 25; i >= 0; i--)
-        {             
-        
-             try
-                 {
-                    Thread.sleep(1000);
-                 }
-                catch(InterruptedException e)
-                 {
-                    e.printStackTrace();
-                 }
-                 
-              
-             System.out.println(i);
-             if (i == 0) {
-                System.out.println("Zeit abgelaufen");
-               }       
-        
-        
-        
-    
+         test.setLabel("Zeit:" + spiel.i);
+         runterzaehlen(25);
         }
-    }  
+    
+    
+      
     
     
     
 }
+
+
