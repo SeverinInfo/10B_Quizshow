@@ -11,12 +11,16 @@ import java.awt.event.*;
     Button butb;
     Button butc;
     Button butd;
-    Button test;
     Label ansa;
     Label ansb;
     Label ansc;
     Label ansd;
     SPIEL spiel;
+    
+    Label timer;
+    Button start;
+    Button stop;
+    
     
     
     
@@ -35,7 +39,9 @@ import java.awt.event.*;
         butc = new Button();
         butd = new Button();
         
-        test = new Button();
+        timer = new Label();
+        start = new Button();
+        stop = new Button();
         
         
         fenster.add(buta);
@@ -48,8 +54,12 @@ import java.awt.event.*;
         fenster.add(ansc);
         fenster.add(ansd);
         
-        fenster.add(test);
+        fenster.add(timer);
+        fenster.add(start);
+        fenster.add(stop);
         
+        
+        fenster.setBackground(Color.BLUE);
         
         // das fenster des Quiz
         fenster.setSize(1920,1080); 
@@ -62,29 +72,29 @@ import java.awt.event.*;
         fragen.setSize(630, 50);
         fragen.setVisible(true);
         fragen.setLocation(645,700);
-        fragen.setText("Frage");
+        fragen.setText( spiel.F1);
         
         
         // die Textfelder der Antworten
         ansa.setSize(300, 50);
         ansa.setVisible(true);
         ansa.setLocation(645, 760);
-        ansa.setText("A:");
+        ansa.setText("A:  "  + F1at);
         
         ansb.setSize(300, 50);
         ansb.setVisible(true);
         ansb.setLocation(975, 760);
-        ansb.setText("B:");
+        ansb.setText("B:  " + F1af1);
         
         ansc.setSize(300, 50);
         ansc.setVisible(true);
         ansc.setLocation(645, 820);
-        ansc.setText("C:");
+        ansc.setText("C:  " + F1af2);
         
         ansd.setSize(300, 50);
         ansd.setVisible(true);
         ansd.setLocation(975, 820);
-        ansd.setText("D:");
+        ansd.setText("D:  " + F1af3);
         
         
         // die Buttons der Antwortmöglichkeiten
@@ -112,24 +122,51 @@ import java.awt.event.*;
         butd.setLabel("D"); 
         butd.setEnabled(true);
         
+        timer.setSize(80,50);
+        timer.setLocation(1000, 50);
+        timer.setVisible(true);
+        timer.setText("Zeit " + spiel.i);
         
-        test.setSize(80, 50);
-        test.setLocation(1800, 100);
-        test.setVisible (true);
-        test.setLabel("Zeit:" + spiel.i); 
-        test.setEnabled(true);
+        start.setSize(80,50);
+        start.setLocation(890, 50);
+        start.setVisible(true);
+        start.setLabel("start");
+        start.setEnabled(true);
+        
+        stop.setSize(80,50);
+        stop.setLocation(890, 200);
+        stop.setVisible(true);
+        stop.setLabel("stop");
+        stop.setEnabled(true);
         
         
-        test.addActionListener(new ActionListener() //nur kurzzeitig als Test, sonst geht das automatisch
+        
+        start.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-                runterzaehlen(25);
-                //test.setLabel("Zeit:" + spiel.i);
+                //runterzaehlen(25);
+                //timer.setText("Zeit: " + spiel.i);       
+                
+                
+                
+                
+                
+                
             }
         });
-         
+        
+        stop.addActionListener(new ActionListener() //nur kurzzeitig als Test, sonst geht das automatisch
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                //return runterzaehlen();
+                //timer.setText("Zeit: " + spiel.i);
+            }
+        });
        
+        
+        
         fenster.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent e)
@@ -139,18 +176,22 @@ import java.awt.event.*;
         });                      
     }
 
-     
-     void starten()
-     {
-         test.setLabel("Zeit:" + spiel.i);
-         runterzaehlen(25);
+    void naechsteFrage(int frage)
+    {
+        for (frage = 1; frage >= 5; frage++)
+        {
+            //fragen.setText(spiel.F + frage);
         }
+        
+    }
+}
+     
     
-    
+     
       
     
     
     
-}
+
 
 
