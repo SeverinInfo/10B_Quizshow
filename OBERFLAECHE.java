@@ -59,7 +59,7 @@ import java.awt.event.*;
         fenster.add(stop);
         
         
-        fenster.setBackground(Color.BLUE);
+        fenster.setBackground(Color.YELLOW);
         
         // das fenster des Quiz
         fenster.setSize(1920,1080); 
@@ -72,29 +72,29 @@ import java.awt.event.*;
         fragen.setSize(630, 50);
         fragen.setVisible(true);
         fragen.setLocation(645,700);
-        fragen.setText( spiel.F1);
+        fragen.setText("" );
         
         
         // die Textfelder der Antworten
         ansa.setSize(300, 50);
         ansa.setVisible(true);
         ansa.setLocation(645, 760);
-        ansa.setText("A:  "  + F1at);
+        ansa.setText("A:  "  );
         
         ansb.setSize(300, 50);
         ansb.setVisible(true);
         ansb.setLocation(975, 760);
-        ansb.setText("B:  " + F1af1);
+        ansb.setText("B:  " );
         
         ansc.setSize(300, 50);
         ansc.setVisible(true);
         ansc.setLocation(645, 820);
-        ansc.setText("C:  " + F1af2);
+        ansc.setText("C:  " );
         
         ansd.setSize(300, 50);
         ansd.setVisible(true);
         ansd.setLocation(975, 820);
-        ansd.setText("D:  " + F1af3);
+        ansd.setText("D:  " );
         
         
         // die Buttons der Antwortmöglichkeiten
@@ -176,14 +176,7 @@ import java.awt.event.*;
         });                      
     }
 
-    void naechsteFrage(int frage)
-    {
-        for (frage = 1; frage >= 5; frage++)
-        {
-            //fragen.setText(spiel.F + frage);
-        }
-        
-    }
+    
 }
      
     

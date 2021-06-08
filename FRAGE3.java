@@ -2,17 +2,21 @@
 
 public class FRAGE3 extends SPIEL
 {
-    String Frage = "In welcher Einheit wird elektrischer Wiederstand gemessen?";
-    String Antf1 = "Volt";
-    String Antf2 = "Amper";
-    String Antt = "Ohm";
-    String Antf3 = "Watt";
+    String Frage ;
+    String Antf1 ;
+    String Antf2 ;
+    String Antt ;
+    String Antf3 ;
     
 
    
     public FRAGE3()
     {
-        
+     Frage = "In welcher Einheit wird elektrischer Wiederstand gemessen?";
+     Antf1 = "Volt";
+     Antf2 = "Amper";
+     Antt = "Ohm";
+     Antf3 = "Watt";
     }
 
 }
