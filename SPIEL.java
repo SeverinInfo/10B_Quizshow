@@ -11,36 +11,8 @@ import java.awt.event.*;
     FRAGE1 frage1;
     FRAGE2 frage2;
     FRAGE3 frage3;
-    
-    // String F1;
-     // String F1at;
-     // String F1af1;
-     // String F1af2;
-     // String F1af3;    
-     
-    // String F2;
-     // String F2at;
-     // String F2af1;
-     // String F2af2;
-     // String F2af3;
-     
-    // String F3;
-     // String F3at;
-     // String F3af1;
-     // String F3af2;
-     // String F3af3;
-     
-    // //String F4;
-     // String F4at;
-     // String F4af1;
-     // String F4af2;
-     // String F4af3;
-     
-    // //String F5;
-     // String F5at;
-     // String F5af1;
-     // String F5af2;
-     // String F5af3;
+    FRAGE4 frage4;
+    FRAGE5 frage5;
     
      
    SPIEL()
@@ -51,41 +23,13 @@ import java.awt.event.*;
         frage1 = new FRAGE1();      
         frage2 = new FRAGE2();
         frage3 = new FRAGE3();
-        System.out.println(Level);
+        frage4 = new FRAGE4();
+        frage5 = new FRAGE5();
         spielen();    
+           
       
       
-      
-      
-     // F1 = "Wofür steht die KGaA?";
-      // F1at = "Kommanditgesellschaft auf Aktien";
-      // F1af1 = "Kaum Götter aßen Ameisen";
-      // F1af2 = "Koordinationsgesellschaft ab Aristoteles";
-      // F1af3 = "Kommandogesetz aus Australien";    
      
-     // F2 = "Wann fiel die Berliener Mauer?";
-      // F2at = "9.11.1989";
-      // F2af1 = "9/11 2001";
-      // F2af2 = "9. Novmeber 1989";
-      // F2af3 = "9.Mai 2005";
-     
-     // //F3 = "In welcher Einheit wird elektrischer Wiederstand gemessen?";
-      // F3at = "Volt";
-      // F3af1 = "Amper";
-      // F3af2 = "Ohm";
-      // F3af3 = "Watt";
-     
-     // //F4 = "Wieviele Planeten hat unser Sonnensystem?";
-      // F4at = "8";
-      // F4af1  = "13";
-      // F4af2 = "7";
-      // F4af3 = "5";
-     
-     // //F5 = "Wie hoch ist die Mehrwertsteuer in Deutschland?";
-      // F5at = "7%";
-      // F5af1 = "16%";
-      // F5af2 = "19%";
-      // F5af3 = "9%";
       
    }
    
@@ -94,36 +38,42 @@ import java.awt.event.*;
       if (Level == 1) {
           
           oberflaeche.fragen.setText(frage1.Frage);        
+          oberflaeche.ansa.setText("A: " +frage1.Antf1);
+          oberflaeche.ansb.setText("B: " +frage1.Antf2);
+          oberflaeche.ansc.setText("C: " +frage1.Antf3);
+          oberflaeche.ansd.setText("D: " +frage1.Antt);
+          
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;               
+               Level = 2;  
+               spielen();
             }
-         });
-         
+         });         
         oberflaeche.butb.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;             
+               Level = 2;   
+               spielen();
             }
-         });
-        
+         });        
         oberflaeche.butc.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;              
+               Level = 2;
+               spielen();
             }
-         });
-        
+         });        
         oberflaeche.butd.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;          
+               Level = 2;
+               spielen();
             }
         });
       }
@@ -131,36 +81,42 @@ import java.awt.event.*;
       if (Level == 2) {
           
           oberflaeche.fragen.setText(frage2.Frage);        
+          oberflaeche.ansa.setText("A: " +frage2.Antf1);
+          oberflaeche.ansb.setText("B: " +frage2.Antt);
+          oberflaeche.ansc.setText("C: " +frage2.Antf2);
+          oberflaeche.ansd.setText("D: " +frage2.Antf3);
+          
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;               
+               Level = 3;  
+               spielen();
             }
-         });
-         
+         });         
         oberflaeche.butb.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;             
+               Level = 3;  
+               spielen();
             }
-         });
-        
+         });        
         oberflaeche.butc.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;              
+               Level = 3;
+               spielen();
             }
-         });
-        
+         });        
         oberflaeche.butd.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;          
+               Level = 3;
+               spielen();               
             }
         });
       }
@@ -168,36 +124,128 @@ import java.awt.event.*;
       if (Level == 3) {
           
           oberflaeche.fragen.setText(frage3.Frage);        
+          oberflaeche.ansa.setText("A: " + frage3.Antf1);
+          oberflaeche.ansb.setText("B: " +frage3.Antf2);
+          oberflaeche.ansc.setText("C: " +frage3.Antt);
+          oberflaeche.ansd.setText("D: " +frage3.Antf3);
+          
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 4;               
+               Level = 4;   
+               spielen();
             }
-         });
-         
+         });         
         oberflaeche.butb.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 4;             
+               Level = 4;   
+               spielen();
             }
-         });
-        
+         });        
         oberflaeche.butc.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 4;              
+               Level = 4;   
+               spielen();
             }
-         });
-        
+         });        
         oberflaeche.butd.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 4;          
+               Level = 4; 
+               spielen();
+            }
+        });
+      }
+      
+      if (Level == 4) {
+          
+          oberflaeche.fragen.setText(frage4.Frage);        
+          oberflaeche.ansa.setText("A: " + frage4.Antf1);
+          oberflaeche.ansb.setText("B: " +frage4.Antf2);
+          oberflaeche.ansc.setText("C: " +frage4.Antt);
+          oberflaeche.ansd.setText("D: " +frage4.Antf3);
+          
+          
+          oberflaeche.buta.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               Level = 5;   
+               spielen();
+            }
+         });         
+        oberflaeche.butb.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               Level = 5;   
+               spielen();
+            }
+         });        
+        oberflaeche.butc.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               Level = 5;   
+               spielen();
+            }
+         });        
+        oberflaeche.butd.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+               Level = 5; 
+               spielen();
+            }
+        });
+      }
+      
+      if (Level == 5) {
+          
+          oberflaeche.fragen.setText(frage5.Frage);        
+          oberflaeche.ansa.setText("A: " + frage5.Antf1);
+          oberflaeche.ansb.setText("B: " +frage5.Antf2);
+          oberflaeche.ansc.setText("C: " +frage5.Antt);
+          oberflaeche.ansd.setText("D: " +frage5.Antf3);
+          
+          
+          oberflaeche.buta.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               //Level = 6;   
+               spielen();
+            }
+         });         
+        oberflaeche.butb.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               //Level = 6;   
+               spielen();
+            }
+         });        
+        oberflaeche.butc.addActionListener(new ActionListener() 
+         {
+            public void actionPerformed(ActionEvent e)
+            {
+               //Level = 6;
+               spielen();
+            }
+         });        
+        oberflaeche.butd.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+               //Level = 6; 
+               spielen();
             }
         });
       }

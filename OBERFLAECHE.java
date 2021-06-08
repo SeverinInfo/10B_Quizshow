@@ -6,6 +6,8 @@ import java.awt.event.*;
  
 {
     Frame fenster;
+    Frame EinstellungenFrame;
+    
     Label fragen;
     Button buta;
     Button butb;
@@ -16,10 +18,14 @@ import java.awt.event.*;
     Label ansc;
     Label ansd;
     
+    Button blau;
+    Button gelb;
+    Button schwarz;
+    Button weiß;
     
     Label timer;
-    Button start;
-    Button stop;
+    Button Einstellungen;
+    Button end;
     
     
     
@@ -29,6 +35,7 @@ import java.awt.event.*;
     {
         
         fenster = new Frame(); 
+        EinstellungenFrame = new Frame();
         fragen = new Label();
         ansa = new Label();
         ansb = new Label();
@@ -40,8 +47,13 @@ import java.awt.event.*;
         butd = new Button();
         
         timer = new Label();
-        start = new Button();
-        stop = new Button();
+        Einstellungen = new Button();
+        end = new Button();
+        
+        blau = new Button();
+        gelb = new Button();
+        schwarz = new Button();
+        weiß = new Button();
         
         
         fenster.add(buta);
@@ -55,11 +67,15 @@ import java.awt.event.*;
         fenster.add(ansd);
         
         fenster.add(timer);
-        fenster.add(start);
-        fenster.add(stop);
+        fenster.add(Einstellungen);
+        fenster.add(end);
         
         
-        fenster.setBackground(Color.YELLOW);
+        fenster.setBackground(Color.WHITE);
+        
+        
+        
+        
         
         // das fenster des Quiz
         fenster.setSize(1920,1080); 
@@ -67,12 +83,42 @@ import java.awt.event.*;
         fenster.setTitle("Quizspiel");
         fenster.setLayout(null);
         
+        EinstellungenFrame.setSize(500,700);
+        EinstellungenFrame.setVisible (false); 
+        EinstellungenFrame.setTitle("Einstellungen");
+        EinstellungenFrame.setLayout(null);
+        EinstellungenFrame.add(blau);
+        EinstellungenFrame.add(gelb);
+        EinstellungenFrame.add(schwarz);
+        EinstellungenFrame.add(weiß);
         
         // das textfeld der Frage
         fragen.setSize(630, 50);
         fragen.setVisible(true);
         fragen.setLocation(645,700);
         fragen.setText("" );
+        
+        blau.setSize(80, 50);
+        blau.setVisible(true);
+        blau.setLocation(210, 50);
+        blau.setEnabled(true);
+        blau.setLabel("Blau");
+        gelb.setSize(80, 50);
+        gelb.setVisible(true);
+        gelb.setLocation(210, 200);
+        gelb.setEnabled(true);
+        gelb.setLabel("Gelb");
+        schwarz.setSize(80, 50);
+        schwarz.setVisible(true);
+        schwarz.setLocation(210, 350);
+        schwarz.setEnabled(true);
+        schwarz.setLabel("Schwarz");
+        weiß.setSize(80, 50);
+        weiß.setVisible(true);
+        weiß.setLocation(210, 500);
+        weiß.setEnabled(true);
+        weiß.setLabel("weiß");
+        
         
         
         // die Textfelder der Antworten
@@ -127,53 +173,91 @@ import java.awt.event.*;
         timer.setVisible(true);
         timer.setText("Zeit " );
         
-        start.setSize(80,50);
-        start.setLocation(890, 50);
-        start.setVisible(true);
-        start.setLabel("start");
-        start.setEnabled(true);
+        Einstellungen.setSize(80,50);
+        Einstellungen.setLocation(890, 100);
+        Einstellungen.setVisible(true);
+        Einstellungen.setLabel("Einstellungen");
+        Einstellungen.setEnabled(true);
         
-        stop.setSize(80,50);
-        stop.setLocation(890, 200);
-        stop.setVisible(true);
-        stop.setLabel("stop");
-        stop.setEnabled(true);
+        end.setSize(80,50);
+        end.setLocation(890, 200);
+        end.setVisible(true);
+        end.setLabel("stop");
+        end.setEnabled(true);
         
         
-        
-        start.addActionListener(new ActionListener() 
+        //Button zum Beenden
+        end.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-                //runterzaehlen(25);
-                //timer.setText("Zeit: " );       
-                
-                
-                
-                
-                
-                
+                System.exit(1);               
             }
         });
         
-        stop.addActionListener(new ActionListener() //nur kurzzeitig als Test, sonst geht das automatisch
+        //Button der Einstellungen
+        Einstellungen.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-                //return runterzaehlen();
-                //timer.setText("Zeit: " );
+                 EinstellungenFrame.setVisible(true);
+                 
             }
         });
-       
         
         
+        //Button zum Farbe ändern
+        blau.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                fenster.setBackground(Color.BLUE);                
+            }
+        });
+        gelb.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                fenster.setBackground(Color.YELLOW);                
+            }
+        });
+        schwarz.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                fenster.setBackground(Color.BLACK);                
+            }
+        });
+        weiß.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                fenster.setBackground(Color.WHITE);                
+            }
+        });
+        
+        
+        
+        //Frame beenden
         fenster.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent e)
             {
                 System.exit(1);
             }
-        });                      
+        });  
+        
+        //frame der Einstellungen
+        EinstellungenFrame.addWindowListener(new WindowAdapter()
+        {
+            public void windowClosing(WindowEvent e)
+            {
+                
+                EinstellungenFrame.setVisible(false);
+            }
+        });
+        
+        
     }
 
     

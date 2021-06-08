@@ -2,16 +2,20 @@
 
 public class FRAGE5 
 {
-    String Frage = "Wie hoch ist die Mehrwertsteuer in Deutschland";
-    String Antf1 = "7%";
-    String Antf2 = "16%";
-    String Antf3 = "19%";
-    String Antf4 = "9%";
+    String Frage ;
+    String Antf1 ;
+    String Antf2 ;
+    String Antf3 ;
+    String Antt ;
 
 
     public FRAGE5()
     {
-  
+          Frage = "Wie hoch ist die Mehrwertsteuer in Deutschland ?";
+          Antf1 = "7%";
+          Antt = "19%";
+          Antf2 = "16%";
+          Antf3 = "9%";
     }
 
 

@@ -12,7 +12,7 @@ public class FRAGE3
    
     public FRAGE3()
     {
-     Frage = "In welcher Einheit wird elektrischer Wiederstand gemessen?";
+     Frage = "In welcher Einheit wird elektrischer Wiederstand gemessen ?";
      Antf1 = "Volt";
      Antf2 = "Amper";
      Antt = "Ohm";

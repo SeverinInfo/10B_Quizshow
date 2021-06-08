@@ -12,7 +12,7 @@ public class FRAGE1
     
     public FRAGE1()
     {
-      Frage = "Wofür steht die KGaA";
+      Frage = "Wofür steht die KGaA ?";
       Antf1 = "Kaum Götter aßen Ameisen";
       Antt = "Kommanditgesellschaft auf Aktien";
       Antf2 = "Koordinationsgesellschaft ab Aristoteles";

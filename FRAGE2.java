@@ -10,7 +10,7 @@ public class FRAGE2
        
     public FRAGE2()
     {
-    Frage = "Wann fiel die Berliener Mauer";
+    Frage = "Wann fiel die Berliener Mauer ?";
      Antt = "9.11.1989";
      Antf1 = "9/11 2001";
      Antf2 = "9. Novmeber 1989";
