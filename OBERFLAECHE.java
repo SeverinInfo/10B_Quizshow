@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt. *;
 import java.awt.event.*;
 
- class OBERFLAECHE extends SPIEL
+ class OBERFLAECHE 
  
 {
     Frame fenster;
@@ -15,7 +15,7 @@ import java.awt.event.*;
     Label ansb;
     Label ansc;
     Label ansd;
-    SPIEL spiel;
+    
     
     Label timer;
     Button start;
@@ -27,7 +27,7 @@ import java.awt.event.*;
     
     OBERFLAECHE()
     {
-        spiel = new SPIEL();
+        
         fenster = new Frame(); 
         fragen = new Label();
         ansa = new Label();
@@ -125,7 +125,7 @@ import java.awt.event.*;
         timer.setSize(80,50);
         timer.setLocation(1000, 50);
         timer.setVisible(true);
-        timer.setText("Zeit " + spiel.i);
+        timer.setText("Zeit " );
         
         start.setSize(80,50);
         start.setLocation(890, 50);
@@ -146,7 +146,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 //runterzaehlen(25);
-                //timer.setText("Zeit: " + spiel.i);       
+                //timer.setText("Zeit: " );       
                 
                 
                 
@@ -161,7 +161,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 //return runterzaehlen();
-                //timer.setText("Zeit: " + spiel.i);
+                //timer.setText("Zeit: " );
             }
         });
        

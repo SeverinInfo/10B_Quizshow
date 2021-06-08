@@ -45,15 +45,14 @@ import java.awt.event.*;
      
    SPIEL()
    {
-        System.out.println(i);     // darstellung von i 
-        frage1 = new FRAGE1();
+        //System.out.println(i);     // darstellung von i 
         oberflaeche = new OBERFLAECHE();
         Level = 1;
+        frage1 = new FRAGE1();      
         frage2 = new FRAGE2();
         frage3 = new FRAGE3();
-        
-     
-      
+        System.out.println(Level);
+        spielen();    
       
       
       
@@ -91,6 +90,7 @@ import java.awt.event.*;
    }
    
     void spielen() {
+                
       if (Level == 1) {
           
           oberflaeche.fragen.setText(frage1.Frage);        
@@ -167,7 +167,7 @@ import java.awt.event.*;
       
       if (Level == 3) {
           
-          oberflaeche.fragen.setText(frage2.Frage);        
+          oberflaeche.fragen.setText(frage3.Frage);        
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {

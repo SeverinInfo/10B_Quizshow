@@ -1,6 +1,6 @@
 
 
-public class FRAGE5 extends SPIEL
+public class FRAGE5 
 {
     String Frage = "Wie hoch ist die Mehrwertsteuer in Deutschland";
     String Antf1 = "7%";

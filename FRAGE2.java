@@ -1,6 +1,6 @@
 
 
-public class FRAGE2 extends SPIEL
+public class FRAGE2 
 {
     String Frage ;
     String Antt ;
