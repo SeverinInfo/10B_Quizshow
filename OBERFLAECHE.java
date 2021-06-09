@@ -8,6 +8,8 @@ import java.awt.event.*;
     Frame fenster;
     Frame EinstellungenFrame;
     
+    
+    
     Label fragen;
     Button buta;
     Button butb;
@@ -23,6 +25,9 @@ import java.awt.event.*;
     Button schwarz;
     Button weiß;
     
+    Button Vollbild;
+    Button Verkleinert;
+    
     Label timer;
     Button Einstellungen;
     Button end;
@@ -36,6 +41,13 @@ import java.awt.event.*;
         
         fenster = new Frame(); 
         EinstellungenFrame = new Frame();
+        
+        
+        
+        
+        
+        
+        
         fragen = new Label();
         ansa = new Label();
         ansb = new Label();
@@ -55,6 +67,9 @@ import java.awt.event.*;
         schwarz = new Button();
         weiß = new Button();
         
+        Vollbild = new Button();
+        Verkleinert = new Button();
+        // adden der Elemente zum Verkleinert
         
         fenster.add(buta);
         fenster.add(butb);
@@ -71,7 +86,7 @@ import java.awt.event.*;
         fenster.add(end);
         
         
-        fenster.setBackground(Color.WHITE);
+        
         
         
         
@@ -82,7 +97,9 @@ import java.awt.event.*;
         fenster.setVisible (true); 
         fenster.setTitle("Quizspiel");
         fenster.setLayout(null);
+        fenster.setBackground(Color.WHITE);
         
+        // das Verkleinert der Einstellung 
         EinstellungenFrame.setSize(500,700);
         EinstellungenFrame.setVisible (false); 
         EinstellungenFrame.setTitle("Einstellungen");
@@ -91,6 +108,9 @@ import java.awt.event.*;
         EinstellungenFrame.add(gelb);
         EinstellungenFrame.add(schwarz);
         EinstellungenFrame.add(weiß);
+        EinstellungenFrame.add(Vollbild);
+        EinstellungenFrame.add(Verkleinert);
+        
         
         // das textfeld der Frage
         fragen.setSize(630, 50);
@@ -98,27 +118,39 @@ import java.awt.event.*;
         fragen.setLocation(645,700);
         fragen.setText("" );
         
+        
+        //Buttons der Farbeinstellung
         blau.setSize(80, 50);
         blau.setVisible(true);
-        blau.setLocation(210, 50);
+        blau.setLocation(350, 50);
         blau.setEnabled(true);
         blau.setLabel("Blau");
         gelb.setSize(80, 50);
         gelb.setVisible(true);
-        gelb.setLocation(210, 200);
+        gelb.setLocation(350, 101);
         gelb.setEnabled(true);
         gelb.setLabel("Gelb");
         schwarz.setSize(80, 50);
         schwarz.setVisible(true);
-        schwarz.setLocation(210, 350);
+        schwarz.setLocation(350, 152);
         schwarz.setEnabled(true);
         schwarz.setLabel("Schwarz");
         weiß.setSize(80, 50);
         weiß.setVisible(true);
-        weiß.setLocation(210, 500);
+        weiß.setLocation(350, 203);
         weiß.setEnabled(true);
         weiß.setLabel("weiß");
         
+        Verkleinert.setSize(80, 50);
+        Verkleinert.setVisible(true);
+        Verkleinert.setLocation(150, 50);
+        Verkleinert.setEnabled(true);
+        Verkleinert.setLabel("Verkleinert");
+        Vollbild.setSize(80, 50);
+        Vollbild.setVisible(true);
+        Vollbild.setLocation(150, 101);
+        Vollbild.setEnabled(true);
+        Vollbild.setLabel("Vollbild");
         
         
         // die Textfelder der Antworten
@@ -168,17 +200,21 @@ import java.awt.event.*;
         butd.setLabel("D"); 
         butd.setEnabled(true);
         
+        
+        //Label des timers
         timer.setSize(80,50);
         timer.setLocation(1000, 50);
         timer.setVisible(true);
         timer.setText("Zeit " );
         
+        //Button zu den Einstellungen
         Einstellungen.setSize(80,50);
         Einstellungen.setLocation(890, 100);
         Einstellungen.setVisible(true);
         Einstellungen.setLabel("Einstellungen");
         Einstellungen.setEnabled(true);
         
+        //Button zum Beenden
         end.setSize(80,50);
         end.setLocation(890, 200);
         end.setVisible(true);
@@ -235,8 +271,30 @@ import java.awt.event.*;
                 fenster.setBackground(Color.WHITE);                
             }
         });
-        
-        
+        Vollbild.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                fenster.setSize(1920,1080);                
+            }
+        });
+        Verkleinert.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                fenster.setSize(1000,1080);   
+                // fragen.setLocation(185,700);
+                // ansa.setLocation(185, 760);
+                // ansb.setLocation(515, 760);
+                // ansc.setLocation(185, 820);
+                // ansd.setLocation(185, 820);
+                
+                // buta.setLocation(355, 900);
+                // butb.setLocation(560, 900);
+                // butc.setLocation(780, 900);
+                // butd.setLocation(985, 900);
+            }
+        });
         
         //Frame beenden
         fenster.addWindowListener(new WindowAdapter()
