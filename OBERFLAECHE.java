@@ -8,7 +8,7 @@ import java.awt.event.*;
     Frame fenster;
     Frame EinstellungenFrame;
     
-    
+    TIMER stoppuhr;
     
     Label fragen;
     Button buta;
@@ -31,7 +31,7 @@ import java.awt.event.*;
     Label timer;
     Button Einstellungen;
     Button end;
-    
+    Button start;
     
     
     
@@ -42,7 +42,7 @@ import java.awt.event.*;
         fenster = new Frame(); 
         EinstellungenFrame = new Frame();
         
-        
+        stoppuhr = new TIMER();
         
         
         
@@ -61,6 +61,7 @@ import java.awt.event.*;
         timer = new Label();
         Einstellungen = new Button();
         end = new Button();
+        start = new Button();
         
         blau = new Button();
         gelb = new Button();
@@ -84,7 +85,7 @@ import java.awt.event.*;
         fenster.add(timer);
         fenster.add(Einstellungen);
         fenster.add(end);
-        
+        fenster.add(start);
         
         
         
@@ -205,22 +206,29 @@ import java.awt.event.*;
         timer.setSize(80,50);
         timer.setLocation(1000, 50);
         timer.setVisible(true);
-        timer.setText("Zeit " );
+        timer.setText("Zeit " + stoppuhr.nummer);
+        
+        
         
         //Button zu den Einstellungen
         Einstellungen.setSize(80,50);
-        Einstellungen.setLocation(890, 100);
+        Einstellungen.setLocation(20, 30);
         Einstellungen.setVisible(true);
         Einstellungen.setLabel("Einstellungen");
         Einstellungen.setEnabled(true);
         
         //Button zum Beenden
         end.setSize(80,50);
-        end.setLocation(890, 200);
+        end.setLocation(20, 81);
         end.setVisible(true);
         end.setLabel("stop");
         end.setEnabled(true);
         
+        start.setSize(80,50);
+        start.setLocation(20, 132);
+        start.setVisible(true);
+        start.setLabel("start");
+        start.setEnabled(true);
         
         //Button zum Beenden
         end.addActionListener(new ActionListener() 
@@ -228,6 +236,16 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 System.exit(1);               
+            }
+        });
+        
+        start.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                stoppuhr.runterzaehlen();    
+                // timer.setText("Zeit " + stoppuhr.nummer);
+                // zeitabfragen();
             }
         });
         
@@ -275,24 +293,34 @@ import java.awt.event.*;
         {
             public void actionPerformed(ActionEvent e)
             {
-                fenster.setSize(1920,1080);                
+                fenster.setSize(1920,1080);  
+                fragen.setLocation(645,700);
+                ansa.setLocation(645, 760);
+                ansb.setLocation(975, 760);
+                ansc.setLocation(645, 820);
+                ansd.setLocation(975, 820);
+                
+                buta.setLocation(605, 900);
+                butb.setLocation(810, 900);
+                butc.setLocation(1030, 900);
+                butd.setLocation(1235, 900);
             }
         });
         Verkleinert.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-                fenster.setSize(1000,1080);   
-                // fragen.setLocation(185,700);
-                // ansa.setLocation(185, 760);
-                // ansb.setLocation(515, 760);
-                // ansc.setLocation(185, 820);
-                // ansd.setLocation(185, 820);
+                 fenster.setSize(960,1080);   
+                 fragen.setLocation(185,700);
+                 ansa.setLocation(185, 760);
+                 ansb.setLocation(515, 760);
+                 ansc.setLocation(185, 820);
+                 ansd.setLocation(515, 820);
                 
-                // buta.setLocation(355, 900);
-                // butb.setLocation(560, 900);
-                // butc.setLocation(780, 900);
-                // butd.setLocation(985, 900);
+                 buta.setLocation(145, 900);
+                 butb.setLocation(350, 900);
+                 butc.setLocation(570, 900);
+                 butd.setLocation(775, 900);
             }
         });
         
@@ -318,7 +346,11 @@ import java.awt.event.*;
         
     }
 
-    
+    // void zeitabfragen()
+    // {
+         // timer.setText("Zeit " + stoppuhr.nummer);
+         // stoppuhr.nummer.getValue( );
+    // }
 }
      
     

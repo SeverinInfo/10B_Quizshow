@@ -252,31 +252,7 @@ import java.awt.event.*;
     }
    
    
-     // void runterzaehlen (int nummer)           //methode, die von 25 bsi 0 sekunden runterzählt 
-    // {
-        
-        // for (z = nummer; z >= 0; z--)
-         // {             
-             
-             // try
-                 // {
-                    // Thread.sleep(1000);
-                 // }
-                // catch(InterruptedException e)
-                 // {
-                    // e.printStackTrace();
-                 // }
-                 
-             // System.out.println(i);
-             // if (z == 0) {
-                // System.out.println("Zeit abgelaufen");
-               // }       
-        
-             // i = z;
-        
-             
-         // }
-    // }
+     
     
     void antwortpruefen() {
         
