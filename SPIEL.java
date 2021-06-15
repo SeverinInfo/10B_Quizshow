@@ -128,24 +128,52 @@ import java.awt.event.*;
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;  
+               
+               if (frage2.RichtigeAntwort == "A" ) {
+                Level = 3;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 3;
+                }
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;  
+               
+               if (frage2.RichtigeAntwort == "B" ) {
+                Level = 3;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 3;
+                }
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;
+               
+               
+               if (frage2.RichtigeAntwort == "C" ) {
+                Level = 3;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 3;
+                }
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -153,14 +181,14 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                if (frage2.RichtigeAntwort == "D" ) {
-                Level = 2;
+                Level = 3;
                spielen();
                oberflaeche.fenster.setBackground(Color.GREEN);
               }
               else {
                    oberflaeche.fenster.setBackground(Color.RED);
                    spielen();
-                   Level = 2;
+                   Level = 3;
                 }              
             }
         });
@@ -265,32 +293,68 @@ import java.awt.event.*;
          {
             public void actionPerformed(ActionEvent e)
             {
-               //Level = 6;   
+               
+               if (frage5.RichtigeAntwort == "A" ) {
+                Level = 6;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 6;
+                }
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               //Level = 6;   
+              
+               if (frage5.RichtigeAntwort == "B" ) {
+                Level = 6;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 6;
+                }
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               //Level = 6;
+              
+               if (frage5.RichtigeAntwort == "C" ) {
+                Level = 6;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 6;
+                }
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-               //Level = 6; 
+               
+               if (frage5.RichtigeAntwort == "D" ) {
+                Level = 6;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 6;
+                }
             }
         });
       }
