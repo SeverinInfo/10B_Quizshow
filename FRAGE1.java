@@ -7,7 +7,7 @@ public class FRAGE1
     String Antt;
     String Antf2;
     String Antf3;
-    
+    String RichtigeAntwort;
     
     
     public FRAGE1()
@@ -17,6 +17,7 @@ public class FRAGE1
       Antt = "Kommanditgesellschaft auf Aktien";
       Antf2 = "Koordinationsgesellschaft ab Aristoteles";
       Antf3 = "Kommandogesetz aus Australien";
+      RichtigeAntwort = "D";
     }
 
     

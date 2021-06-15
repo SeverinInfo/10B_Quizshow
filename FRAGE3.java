@@ -7,7 +7,7 @@ public class FRAGE3
     String Antf2 ;
     String Antt ;
     String Antf3 ;
-    
+    String RichtigeAntwort;
 
    
     public FRAGE3()
@@ -17,6 +17,7 @@ public class FRAGE3
      Antf2 = "Amper";
      Antt = "Ohm";
      Antf3 = "Watt";
+     RichtigeAntwort = "C";
     }
 
 }

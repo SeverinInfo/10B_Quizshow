@@ -13,8 +13,8 @@ import java.awt.event.*;
     FRAGE3 frage3;
     FRAGE4 frage4;
     FRAGE5 frage5;
-    
-     
+    boolean frageRichtig;
+    String aktuelleFrageRichtig;
    SPIEL()
    {
         //System.out.println(i);     // darstellung von i 
@@ -44,36 +44,73 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage1.Antt);
           
           
+          
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;  
+               
+                
+               if (frage1.RichtigeAntwort == "A" ) {
+                Level = 2;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   Level = 2;
+                   spielen();
+                }
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;   
+               
+               if (frage1.RichtigeAntwort == "B" ) {
+                Level = 2;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 2;
+                }
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;
+               
+               if (frage1.RichtigeAntwort == "C" ) {
+                Level = 2;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 2;
+                }
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 2;
+               if (frage1.RichtigeAntwort == "D" ) {
+                Level = 2;
                spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 2;
+                }
             }
         });
       }
@@ -115,8 +152,16 @@ import java.awt.event.*;
         {
             public void actionPerformed(ActionEvent e)
             {
-               Level = 3;
-               spielen();               
+               if (frage2.RichtigeAntwort == "D" ) {
+                Level = 2;
+               spielen();
+               oberflaeche.fenster.setBackground(Color.GREEN);
+              }
+              else {
+                   oberflaeche.fenster.setBackground(Color.RED);
+                   spielen();
+                   Level = 2;
+                }              
             }
         });
       }
@@ -256,9 +301,66 @@ import java.awt.event.*;
     
     void antwortpruefen() {
         
+        
     }
     
-    
+    void fragen() {
+        
+        switch (Level){
+         
+          case 1:
+          oberflaeche.fragen.setText(frage1.Frage);        
+          oberflaeche.ansa.setText("A: " +frage1.Antf1);
+          oberflaeche.ansb.setText("B: " +frage1.Antf2);
+          oberflaeche.ansc.setText("C: " +frage1.Antf3);
+          oberflaeche.ansd.setText("D: " +frage1.Antt);
+          //getText(oberflaeche.ansd).frageRichtig = true;
+          aktuelleFrageRichtig = oberflaeche.ansd.getText();
+          System.out.println(aktuelleFrageRichtig);
+          Level = 2;
+          break;
+          
+          
+          case 2:
+          oberflaeche.fragen.setText(frage2.Frage);        
+          oberflaeche.ansa.setText("A: " +frage2.Antf1);
+          oberflaeche.ansb.setText("B: " +frage2.Antt);
+          oberflaeche.ansc.setText("C: " +frage2.Antf2);
+          oberflaeche.ansd.setText("D: " +frage2.Antf3);
+          Level = 3;
+          break;
+          
+          case 3:
+          oberflaeche.fragen.setText(frage3.Frage);        
+          oberflaeche.ansa.setText("A: " + frage3.Antf1);
+          oberflaeche.ansb.setText("B: " +frage3.Antf2);
+          oberflaeche.ansc.setText("C: " +frage3.Antt);
+          oberflaeche.ansd.setText("D: " +frage3.Antf3);
+          Level = 4;
+          break;
+          
+          case 4: 
+          oberflaeche.fragen.setText(frage4.Frage);        
+          oberflaeche.ansa.setText("A: " + frage4.Antf1);
+          oberflaeche.ansb.setText("B: " +frage4.Antf2);
+          oberflaeche.ansc.setText("C: " +frage4.Antt);
+          oberflaeche.ansd.setText("D: " +frage4.Antf3);
+          Level = 5; 
+          break;
+          
+          case 5: 
+          oberflaeche.fragen.setText(frage5.Frage);        
+          oberflaeche.ansa.setText("A: " + frage5.Antf1);
+          oberflaeche.ansb.setText("B: " +frage5.Antf2);
+          oberflaeche.ansc.setText("C: " +frage5.Antt);
+          oberflaeche.ansd.setText("D: " +frage5.Antf3);
+          //Level = 6;
+          break;
+          
+          
+        }
+        
+    }
     
     
 }

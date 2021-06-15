@@ -7,7 +7,7 @@ public class FRAGE5
     String Antf2 ;
     String Antf3 ;
     String Antt ;
-
+    String RichtigeAntwort;
 
     public FRAGE5()
     {
@@ -16,6 +16,7 @@ public class FRAGE5
           Antt = "19%";
           Antf2 = "16%";
           Antf3 = "9%";
+          RichtigeAntwort = "C";
     }
 
 

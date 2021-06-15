@@ -7,7 +7,7 @@ public class FRAGE4
     String Antt ;
     String Antf2 ;
     String Antf3 ;
-    
+    String RichtigeAntwort;
     
     public FRAGE4()
     {
@@ -15,6 +15,8 @@ public class FRAGE4
         Antf1 = "13";
         Antf2 = "7";
         Antf3 = "5";
+        Antt = "8";
+        RichtigeAntwort = "C";
     }
 
 }
