@@ -1,5 +1,6 @@
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit ;
 
 class TIMER
 {
@@ -13,7 +14,18 @@ class TIMER
         
     }
 
-    
+    void delay(int ms) {
+        
+        try
+                 {
+                    TimeUnit.MILLISECONDS.sleep(ms);
+                 }
+                catch(InterruptedException e)
+                 {
+                    e.printStackTrace();
+                 }
+        
+    }
     
                 
     void runterzaehlen() {
@@ -25,8 +37,7 @@ class TIMER
                 
                 public void run() {                     
                     System.out.println(i);
-                    i--;
-                    
+                    i--;                    
                     if (i == 0) 
                     {
                         return ;

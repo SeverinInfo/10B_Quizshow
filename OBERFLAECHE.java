@@ -11,30 +11,41 @@ import java.awt.event.*;
     TIMER stoppuhr;
     
     Label fragen;
-    Button buta;
-    Button butb;
-    Button butc;
-    Button butd;
+    
+    Label line1;
+    Label line2;
+    Label line3;
+    Label line4;
+    Label line5;
+    Label line6;
+    
+    Label timer;
+    
     Label ansa;
     Label ansb;
     Label ansc;
     Label ansd;
     
+    Button buta;
+    Button butb;
+    Button butc;
+    Button butd;
+        
     Button blau;
     Button gelb;
     Button schwarz;
     Button weiß;
     
     Button Vollbild;
-    Button Verkleinert;
+    Button Verkleinert;    
     
-    Label timer;
     Button Einstellungen;
     Button end;
-    Button start;
+    Button start;  
     
     
     
+    Color color;
     
     OBERFLAECHE()
     {
@@ -44,6 +55,12 @@ import java.awt.event.*;
         
         stoppuhr = new TIMER();
         
+        line1 = new Label();
+        line2 = new Label();
+        line3 = new Label();
+        line4 = new Label();
+        line5 = new Label();
+        line6 = new Label();
         
         
         
@@ -87,6 +104,13 @@ import java.awt.event.*;
         fenster.add(end);
         fenster.add(start);
         
+        fenster.add(line1);
+        fenster.add(line2);
+        fenster.add(line3);
+        fenster.add(line4);
+        fenster.add(line5);
+        fenster.add(line6);
+        
         
         
         
@@ -99,6 +123,7 @@ import java.awt.event.*;
         fenster.setTitle("Quizspiel");
         fenster.setLayout(null);
         fenster.setBackground(Color.WHITE);
+        color = Color.WHITE;
         
         // das Verkleinert der Einstellung 
         EinstellungenFrame.setSize(500,700);
@@ -111,6 +136,43 @@ import java.awt.event.*;
         EinstellungenFrame.add(weiß);
         EinstellungenFrame.add(Vollbild);
         EinstellungenFrame.add(Verkleinert);
+        
+        
+        line1.setSize(70,20);
+        line1.setLocation(1700, 400);
+        line1.setVisible(true);
+        line1.setText("Level 6 ");       
+        
+        
+        line2.setSize(70,20);
+        line2.setLocation(1700, 420);
+        line2.setVisible(true);
+        line2.setText("Level 5 ");
+        
+        
+        line3.setSize(70,20);
+        line3.setLocation(1700, 440);
+        line3.setVisible(true);
+        line3.setText("Level 4 ");
+        
+        
+        line4.setSize(70,20);
+        line4.setLocation(1700, 460);
+        line4.setVisible(true);
+        line4.setText("Level 3 ");
+        
+        
+        line5.setSize(70,20);
+        line5.setLocation(1700, 480);
+        line5.setVisible(true);
+        line5.setText("Level 2 ");
+        
+        
+        line6.setSize(70,20);
+        line6.setLocation(1700, 500);
+        line6.setVisible(true);
+        line6.setText("Level 1 ");
+        
         
         
         // das textfeld der Frage
@@ -260,12 +322,13 @@ import java.awt.event.*;
         });
         
         
-        //Button zum Farbe ändern
+        //Buttons zum Farbe ändern
         blau.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-                fenster.setBackground(Color.BLUE);                
+                fenster.setBackground(Color.BLUE);   
+                color = Color.BLUE;
             }
         });
         gelb.addActionListener(new ActionListener() 
@@ -273,6 +336,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 fenster.setBackground(Color.YELLOW);                
+                color = Color.YELLOW;
             }
         });
         schwarz.addActionListener(new ActionListener() 
@@ -280,6 +344,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 fenster.setBackground(Color.BLACK);                
+                color = Color.BLACK;
             }
         });
         weiß.addActionListener(new ActionListener() 
@@ -287,6 +352,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 fenster.setBackground(Color.WHITE);                
+                color = Color.WHITE;
             }
         });
         Vollbild.addActionListener(new ActionListener() 
