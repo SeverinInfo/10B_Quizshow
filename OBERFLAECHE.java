@@ -18,6 +18,8 @@ import java.awt.event.*;
     Label line4;
     Label line5;
     Label line6;
+    Label Score;
+    
     
     Label timer;
     
@@ -61,7 +63,7 @@ import java.awt.event.*;
         line4 = new Label();
         line5 = new Label();
         line6 = new Label();
-        
+        Score = new Label();
         
         
         
@@ -110,7 +112,7 @@ import java.awt.event.*;
         fenster.add(line4);
         fenster.add(line5);
         fenster.add(line6);
-        
+        fenster.add(Score);
         
         
         
@@ -173,7 +175,10 @@ import java.awt.event.*;
         line6.setVisible(true);
         line6.setText("Level 1 ");
         
-        
+        Score.setSize(70,20);
+        Score.setLocation(1700, 520);
+        Score.setVisible(true);
+        Score.setText("Punkte: ");
         
         // das textfeld der Frage
         fragen.setSize(630, 50);
