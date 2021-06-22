@@ -11,6 +11,12 @@ import java.awt.event.*;
     FRAGE3 frage3;
     FRAGE4 frage4;
     FRAGE5 frage5;
+    FRAGE6 frage6;
+    FRAGE7 frage7;
+    FRAGE8 frage8;
+    FRAGE9 frage9;
+    FRAGE10 frage10;
+    
     
     
    SPIEL()
@@ -22,6 +28,11 @@ import java.awt.event.*;
         frage3 = new FRAGE3();
         frage4 = new FRAGE4();
         frage5 = new FRAGE5();
+        frage6 = new FRAGE6();
+        frage7 = new FRAGE7();
+        frage8 = new FRAGE8();
+        frage9 = new FRAGE9();
+        frage10 = new FRAGE10();
         spielen();    
            
         
