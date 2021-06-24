@@ -16,7 +16,7 @@ public class FRAGE10
       Antt = "U";
       Antf2 = "Ga";
       Antf3 = "Er";
-      RichtigeAntwort = "D";
+      RichtigeAntwort = "A";
     }
 
     
