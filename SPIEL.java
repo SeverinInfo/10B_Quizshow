@@ -44,28 +44,28 @@ import java.awt.event.*;
        switch (Level) {
        case 1: 
        
-       //if (Level == 1) {
+       
           oberflaeche.fragen.setText(frage1.Frage);        
           oberflaeche.ansa.setText("A: " +frage1.Antf1);
           oberflaeche.ansb.setText("B: " +frage1.Antf2);
           oberflaeche.ansc.setText("C: " +frage1.Antf3);
           oberflaeche.ansd.setText("D: " +frage1.Antt);
-          oberflaeche.line6.setText("Level 1 <----");          
+          oberflaeche.line10.setText("Level 1 <----");          
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
                if (frage1.RichtigeAntwort == "A" ) {             
-               oberflaeche.fenster.setBackground(Color.GREEN);              
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);              
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 2;
-                System.out.println(Level);
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -73,15 +73,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage1.RichtigeAntwort == "B" ) {                          
-               oberflaeche.fenster.setBackground(Color.GREEN);             
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);             
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;                
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;                
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 2;
-                System.out.println(Level);
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -89,15 +89,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                 if (frage1.RichtigeAntwort == "C" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);              
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);              
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                    
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 2; 
-                System.out.println(Level);
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -105,44 +105,45 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                 if (frage1.RichtigeAntwort == "D" ) { 
-               oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;                              
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;                              
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);                                      
+                   oberflaeche.SpielFrame.setBackground(Color.RED);                                      
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 2; 
-                System.out.println(Level);
+                spielen();
             }
         });   
         Level = 2;
         break;
         
-        //}
+        
       case 2:
-         //if (Level == 2) {          
+                  
           oberflaeche.fragen.setText(frage2.Frage);        
           oberflaeche.ansa.setText("A: " +frage2.Antf1);
           oberflaeche.ansb.setText("B: " +frage2.Antt);
           oberflaeche.ansc.setText("C: " +frage2.Antf2);
           oberflaeche.ansd.setText("D: " +frage2.Antf3);
-          oberflaeche.line5.setText("Level 2 <----");
-          oberflaeche.line6.setText("Level 1 ");
+          oberflaeche.line9.setText("Level 2 <----");
+          oberflaeche.line10.setText("Level 1 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
                if (frage2.RichtigeAntwort == "A" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);        
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);        
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 3;
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -150,14 +151,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage2.RichtigeAntwort == "B" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);                    
+                   oberflaeche.SpielFrame.setBackground(Color.RED);                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 3;
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -165,14 +167,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
               if (frage2.RichtigeAntwort == "C" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);                
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);                
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);   
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);   
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 3;
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -180,41 +183,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                if (frage2.RichtigeAntwort == "D" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;               
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;               
                 }   
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 3;
+                spielen();
             }
         });
         break;
-       //}
+       
       case 3:
-       //if (Level == 3) {          
+                 
           oberflaeche.fragen.setText(frage3.Frage);        
           oberflaeche.ansa.setText("A: " + frage3.Antf1);
           oberflaeche.ansb.setText("B: " +frage3.Antf2);
           oberflaeche.ansc.setText("C: " +frage3.Antt);
           oberflaeche.ansd.setText("D: " +frage3.Antf3);
-          oberflaeche.line4.setText("Level 3 <----");
-          oberflaeche.line5.setText("Level 2 ");
+          oberflaeche.line8.setText("Level 3 <----");
+          oberflaeche.line9.setText("Level 2 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage3.RichtigeAntwort == "A" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 4;
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -222,14 +227,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                if (frage3.RichtigeAntwort == "B" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);              
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);              
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 4;
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -237,14 +243,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage3.RichtigeAntwort == "C" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);              
+                   oberflaeche.SpielFrame.setBackground(Color.RED);              
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 4;
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -252,42 +259,44 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                if (frage3.RichtigeAntwort == "D" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);   
-                   AnzahlPunkte = AnzahlPunkte - 3;                   
+                   oberflaeche.SpielFrame.setBackground(Color.RED);   
+                   //AnzahlPunkte = AnzahlPunkte - 3;                   
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 4; 
+                spielen();
             }
         });
         break;
-       //}
+       
     
       case 4:
-       //if (Level == 4) {          
+                 
           oberflaeche.fragen.setText(frage4.Frage);        
           oberflaeche.ansa.setText("A: " + frage4.Antf1);
           oberflaeche.ansb.setText("B: " +frage4.Antf2);
           oberflaeche.ansc.setText("C: " +frage4.Antt);
           oberflaeche.ansd.setText("D: " +frage4.Antf3);
-          oberflaeche.line3.setText("Level 4 <----");
-          oberflaeche.line4.setText("Level 3 ");
+          oberflaeche.line7.setText("Level 4 <----");
+          oberflaeche.line8.setText("Level 3 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage4.RichtigeAntwort == "A" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED); 
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED); 
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 5; 
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -295,14 +304,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                 if (frage4.RichtigeAntwort == "B" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED); 
-                   AnzahlPunkte = AnzahlPunkte - 3;               
+                   oberflaeche.SpielFrame.setBackground(Color.RED); 
+                   //AnzahlPunkte = AnzahlPunkte - 3;               
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 5; 
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -310,14 +320,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                 if (frage4.RichtigeAntwort == "C" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);                   
+                   oberflaeche.SpielFrame.setBackground(Color.RED);                   
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 5; 
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -325,41 +336,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 if (frage4.RichtigeAntwort == "D" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;             
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;             
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 5;
+                spielen();
             }
         });
         break;
-       //}
+       
       case 5:
-       //if (Level == 5) {          
+                 
           oberflaeche.fragen.setText(frage5.Frage);        
           oberflaeche.ansa.setText("A: " + frage5.Antf1);
           oberflaeche.ansb.setText("B: " +frage5.Antf2);
           oberflaeche.ansc.setText("C: " +frage5.Antt);
           oberflaeche.ansd.setText("D: " +frage5.Antf3);
-          oberflaeche.line2.setText("Level 5 <----");
-          oberflaeche.line3.setText("Level 4 ");
+          oberflaeche.line6.setText("Level 5 <----");
+          oberflaeche.line7.setText("Level 4 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {
                if (frage5.RichtigeAntwort == "A" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                                       
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                                       
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 6; 
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -367,14 +380,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage5.RichtigeAntwort == "B" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;              
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;              
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 6; 
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -382,14 +396,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage5.RichtigeAntwort == "C" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;               
                }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);             
+                   oberflaeche.SpielFrame.setBackground(Color.RED);             
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 6; 
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -397,41 +412,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage5.RichtigeAntwort == "D" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;                    
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 6;
+                spielen();
             }
         });
        break;
-       //}
+       
       case 6:
-       //if (Level == 6) {          
+                 
           oberflaeche.fragen.setText(frage6.Frage);        
           oberflaeche.ansa.setText("A: " + frage6.Antf1);
           oberflaeche.ansb.setText("B: " +frage6.Antf2);
           oberflaeche.ansc.setText("C: " +frage6.Antf3);
           oberflaeche.ansd.setText("D: " +frage6.Antt);
-          oberflaeche.line2.setText("Level 5 <----");
-          oberflaeche.line3.setText("Level 5 ");
+          oberflaeche.line5.setText("Level 6 <----");
+          oberflaeche.line6.setText("Level 5 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage6.RichtigeAntwort == "A" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 7;
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -439,14 +456,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage6.RichtigeAntwort == "B" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                   
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                   
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 7;
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -454,14 +472,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage6.RichtigeAntwort == "C" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                    
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 7;
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -469,41 +488,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage6.RichtigeAntwort == "D" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;            
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;            
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);                    
+                   oberflaeche.SpielFrame.setBackground(Color.RED);                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 7;
+                spielen();
             }
         });       
         break;
-       //}
+       
       case 7:
-       //if (Level == 7) {          
+                 
           oberflaeche.fragen.setText(frage7.Frage);        
           oberflaeche.ansa.setText("A: " + frage7.Antt);
           oberflaeche.ansb.setText("B: " +frage7.Antf2);
           oberflaeche.ansc.setText("C: " +frage7.Antf1);
           oberflaeche.ansd.setText("D: " +frage7.Antf3);
-          oberflaeche.line2.setText("Level 5 <----");
-          oberflaeche.line3.setText("Level 4 ");
+          oberflaeche.line4.setText("Level 7 <----");
+          oberflaeche.line5.setText("Level 6 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage7.RichtigeAntwort == "A" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);             
+                   oberflaeche.SpielFrame.setBackground(Color.RED);             
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 8; 
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -511,14 +532,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage7.RichtigeAntwort == "B" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;             
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;             
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 8;
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -526,14 +548,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage7.RichtigeAntwort == "C" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;               
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;               
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 8;
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -541,41 +564,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage7.RichtigeAntwort == "D" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;                  
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 8;
+                spielen();
             }
         });
        break;
-       //}
+       
       case 8:
-       //if (Level == 8) {
+       
           oberflaeche.fragen.setText(frage8.Frage);        
           oberflaeche.ansa.setText("A: " + frage8.Antf1);
           oberflaeche.ansb.setText("B: " +frage8.Antf2);
           oberflaeche.ansc.setText("C: " +frage8.Antt);
           oberflaeche.ansd.setText("D: " +frage8.Antf3);
-          oberflaeche.line2.setText("Level 5 <----");
-          oberflaeche.line3.setText("Level 4 ");
+          oberflaeche.line3.setText("Level 8 <----");
+          oberflaeche.line4.setText("Level 7 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage8.RichtigeAntwort == "A" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                   
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                   
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 9;
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -583,14 +608,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage8.RichtigeAntwort == "B" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                 
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                 
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 9;
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -598,14 +624,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage8.RichtigeAntwort == "C" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;              
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;              
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);                
+                   oberflaeche.SpielFrame.setBackground(Color.RED);                
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 9;
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -613,41 +640,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage8.RichtigeAntwort == "D" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);         
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);         
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;                    
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 9;
+                spielen();
             }
         });   
         break;
-       //}
+       
      case 9:
-      // if (Level == 9) {          
+               
           oberflaeche.fragen.setText(frage9.Frage);        
           oberflaeche.ansa.setText("A: " + frage9.Antf2);
           oberflaeche.ansb.setText("B: " +frage9.Antt);
           oberflaeche.ansc.setText("C: " +frage9.Antf1);
           oberflaeche.ansd.setText("D: " +frage9.Antf3);
-          oberflaeche.line2.setText("Level 5 <----");
-          oberflaeche.line3.setText("Level 4 ");
+          oberflaeche.line2.setText("Level 9 <----");
+          oberflaeche.line3.setText("Level 8 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage9.RichtigeAntwort == "A" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);             
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);             
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                   
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                   
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 10; 
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -655,14 +684,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage9.RichtigeAntwort == "B" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);              
+                   oberflaeche.SpielFrame.setBackground(Color.RED);              
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 10; 
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -670,14 +700,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage9.RichtigeAntwort == "C" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);               
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;              
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;              
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 10; 
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -685,40 +716,43 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage9.RichtigeAntwort == "D" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;               
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;               
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 Level = 10; 
+                spielen();
             }
         });
        break;
-       //}
+       
      case 10:
-       //if (Level == 10) {          
+                 
           oberflaeche.fragen.setText(frage10.Frage);        
           oberflaeche.ansa.setText("A: " + frage10.Antt);
           oberflaeche.ansb.setText("B: " +frage10.Antf2);
           oberflaeche.ansc.setText("C: " +frage10.Antf1);
           oberflaeche.ansd.setText("D: " +frage10.Antf3);
-          oberflaeche.line2.setText("Level 5 <----");
-          oberflaeche.line3.setText("Level 4 ");
+          oberflaeche.line1.setText("Level 10 <----");
+          oberflaeche.line2.setText("Level 9 ");
           
           oberflaeche.buta.addActionListener(new ActionListener() 
          {
             public void actionPerformed(ActionEvent e)
             {               
                if (frage10.RichtigeAntwort == "A" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);
-               AnzahlPunkte = AnzahlPunkte + 5;
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);
+               //AnzahlPunkte = AnzahlPunkte + 5;
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);               
+                   oberflaeche.SpielFrame.setBackground(Color.RED);               
                 }
-                oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);                 
+                oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);     
+                Level = 11;
+                spielen();
             }
          });         
         oberflaeche.butb.addActionListener(new ActionListener() 
@@ -726,13 +760,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage10.RichtigeAntwort == "B" ) {
-                oberflaeche.fenster.setBackground(Color.GREEN);              
+                oberflaeche.SpielFrame.setBackground(Color.GREEN);              
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                   
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                   
                 }
-                oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);                 
+                oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);   
+                Level = 11;
+                spielen();
             }
          });        
         oberflaeche.butc.addActionListener(new ActionListener() 
@@ -740,13 +776,15 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {              
                if (frage10.RichtigeAntwort == "C" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);  
-                   AnzahlPunkte = AnzahlPunkte - 3;                 
+                   oberflaeche.SpielFrame.setBackground(Color.RED);  
+                   //AnzahlPunkte = AnzahlPunkte - 3;                 
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
+                Level = 11;
+                spielen();
             }
          });        
         oberflaeche.butd.addActionListener(new ActionListener() 
@@ -754,20 +792,27 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {               
                if (frage10.RichtigeAntwort == "D" ) {
-               oberflaeche.fenster.setBackground(Color.GREEN);               
+               oberflaeche.SpielFrame.setBackground(Color.GREEN);               
               }
               else {
-                   oberflaeche.fenster.setBackground(Color.RED);    
-                   AnzahlPunkte = AnzahlPunkte - 3;                                       
+                   oberflaeche.SpielFrame.setBackground(Color.RED);    
+                   //AnzahlPunkte = AnzahlPunkte - 3;                                       
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
+                Level = 11;
+                spielen();
             }
         });    
         break;
-       //}
+       
+       
+     case 11:
+     
+         oberflaeche.EndFrame.setVisible(true);
+         oberflaeche.SpielFrame.setVisible(false);
        
      default: 
-     System.out.println("Error");  
+      
     }
     }
    
