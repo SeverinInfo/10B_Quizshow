@@ -19,8 +19,6 @@ import java.awt.event.*;
     FRAGE10 frage10;
     
     
-
-    
    SPIEL()
    {
         oberflaeche = new OBERFLAECHE();        
@@ -39,7 +37,7 @@ import java.awt.event.*;
         spielen();
     }
    
-    void spielen() {
+   void spielen() {
         
        switch (Level) {
        case 1: 
@@ -814,12 +812,9 @@ import java.awt.event.*;
      default: 
       
     }
-    }
+   }
    
-    void nextLevel() {
-        
-        Level = Level + 1; 
-    }
+    
     
     
     

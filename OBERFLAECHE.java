@@ -442,7 +442,7 @@ import java.awt.event.*;
                 butc.setLocation(1030, 900);
                 butd.setLocation(1235, 900);
                 
-                line1.setLocation(1700, 400);
+                 line1.setLocation(1700, 400);
                  line2.setLocation(1700, 420);
                  line3.setLocation(1700, 440);
                  line4.setLocation(1700, 460);
@@ -459,7 +459,7 @@ import java.awt.event.*;
         {
             public void actionPerformed(ActionEvent e)
             {
-                 SpielFrame.setSize(960,1080);   
+                  SpielFrame.setSize(960,1080);   
                  fragen.setLocation(185,700);
                  ansa.setLocation(185, 760);
                  ansb.setLocation(515, 760);
@@ -499,7 +499,6 @@ import java.awt.event.*;
         {
             public void windowClosing(WindowEvent e)
             {
-                
                 EinstellungenFrame.setVisible(false);
             }
         });
@@ -508,7 +507,6 @@ import java.awt.event.*;
         {
             public void windowClosing(WindowEvent e)
             {
-                
                 System.exit(1);
             }
         });
@@ -517,7 +515,6 @@ import java.awt.event.*;
         {
             public void windowClosing(WindowEvent e)
             {
-                
                 System.exit(1);
             }
         });

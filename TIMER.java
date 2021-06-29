@@ -50,39 +50,13 @@ class TIMER
         
     }
                 
-    public long getNummer() {
-        return nummer;}
+    // public long getNummer() {
+        // return nummer;}
         
     // public long setNummer(long nummer) {
         // this.nummer = nummer;}   
         
         
     }
-    // private void runterzaehlen (int nummer)           //methode, die von 25 bsi 0 sekunden runterzählt 
-    // {
-        
-        // for (i = nummer; i >= 0; i--)
-         // {             
-             
-              // try
-                 // {
-                    // TimeUnit.SECONDS.sleep(1);
-                 // }
-                // catch(InterruptedException e)
-                 // {
-                    // e.printStackTrace();
-                 // }
-             
-                 
-             
-             // //System.out.println(i);
-             // // if (z == 0) {
-                // // System.out.println("Zeit abgelaufen");
-               // // }       
-        
-             
-        
-             
-         // }
-    // }
+    
 
