@@ -114,7 +114,7 @@ import java.awt.event.*;
                 spielen();
             }
         });   
-        Level = 2;
+        
         break;
         
         
