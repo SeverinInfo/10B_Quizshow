@@ -17,7 +17,7 @@ import java.awt.event.*;
     FRAGE8 frage8;
     FRAGE9 frage9;
     FRAGE10 frage10;
-    
+    String aktuelleFrage;
     
 
     
@@ -36,7 +36,9 @@ import java.awt.event.*;
         frage10 = new FRAGE10();
         AnzahlPunkte = 0;
         Level = 1;
+        aktuelleFrage = frage1.RichtigeAntwort;
         spielen();
+        
     }
    
     void spielen() {
@@ -51,8 +53,8 @@ import java.awt.event.*;
           oberflaeche.ansc.setText("C: " +frage1.Antf3);
           oberflaeche.ansd.setText("D: " +frage1.Antt);
           oberflaeche.line10.setText("Level 1 <----");          
-          
-            
+          aktuelleFrage = frage1.RichtigeAntwort;
+          checkLevel(); 
         
         break;
         
@@ -66,8 +68,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage2.Antf3);
           oberflaeche.line9.setText("Level 2 <----");
           oberflaeche.line10.setText("Level 1 ");
-          
-          
+          aktuelleFrage = frage2.RichtigeAntwort;
+          checkLevel();
         break;
        
       case 3:
@@ -79,8 +81,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage3.Antf3);
           oberflaeche.line8.setText("Level 3 <----");
           oberflaeche.line9.setText("Level 2 ");
-          
-          
+          aktuelleFrage = frage3.RichtigeAntwort;
+          checkLevel();
         break;
        
     
@@ -93,8 +95,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage4.Antf3);
           oberflaeche.line7.setText("Level 4 <----");
           oberflaeche.line8.setText("Level 3 ");
-          
-          
+          aktuelleFrage = frage4.RichtigeAntwort;
+          checkLevel();
         break;
        
       case 5:
@@ -106,8 +108,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage5.Antf3);
           oberflaeche.line6.setText("Level 5 <----");
           oberflaeche.line7.setText("Level 4 ");
-          
-          
+          aktuelleFrage = frage5.RichtigeAntwort;
+          checkLevel();
        break;
        
       case 6:
@@ -119,8 +121,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage6.Antt);
           oberflaeche.line5.setText("Level 6 <----");
           oberflaeche.line6.setText("Level 5 ");
-          
-                 
+          aktuelleFrage = frage6.RichtigeAntwort;
+          checkLevel();       
         break;
        
       case 7:
@@ -132,8 +134,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage7.Antf3);
           oberflaeche.line4.setText("Level 7 <----");
           oberflaeche.line5.setText("Level 6 ");
-          
-          
+          aktuelleFrage = frage7.RichtigeAntwort;
+          checkLevel();
        break;
        
       case 8:
@@ -145,8 +147,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage8.Antf3);
           oberflaeche.line3.setText("Level 8 <----");
           oberflaeche.line4.setText("Level 7 ");
-          
-  
+          aktuelleFrage = frage8.RichtigeAntwort;
+          checkLevel();
         break;
        
      case 9:
@@ -158,8 +160,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage9.Antf3);
           oberflaeche.line2.setText("Level 9 <----");
           oberflaeche.line3.setText("Level 8 ");
-          
-          
+          aktuelleFrage = frage9.RichtigeAntwort;
+          checkLevel();
        break;
        
      case 10:
@@ -171,8 +173,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage10.Antf3);
           oberflaeche.line1.setText("Level 10 <----");
           oberflaeche.line2.setText("Level 9 ");
-          
-             
+          aktuelleFrage = frage10.RichtigeAntwort;
+          checkLevel();   
         break;
        
        
@@ -194,7 +196,7 @@ import java.awt.event.*;
          {
             public void actionPerformed(ActionEvent e)
             {
-               if ((frage + Level).RichtigeAntwort == "A" ) {             
+               if (aktuelleFrage == "A" ) {             
                oberflaeche.SpielFrame.setBackground(Color.GREEN);       
                //AnzahlPunkte = AzahlPunkte + 5;
               }
@@ -203,8 +205,9 @@ import java.awt.event.*;
                    //AnzahlPunkte = AnzahlPunkte - 3;                  
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
-                Level = 2;
-                spielen();
+                
+                Level = Level++;
+                
             }
          });
          
@@ -212,7 +215,7 @@ import java.awt.event.*;
          {
             public void actionPerformed(ActionEvent e)
             {              
-               if (frage1.RichtigeAntwort == "B" ) {                          
+               if (aktuelleFrage == "B" ) {                          
                oberflaeche.SpielFrame.setBackground(Color.GREEN);             
               }
               else {
@@ -220,8 +223,8 @@ import java.awt.event.*;
                    //AnzahlPunkte = AnzahlPunkte - 3;                
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
-                Level = 2;
-                spielen();
+                
+                Level = Level++;
             }
          });
          
@@ -229,7 +232,7 @@ import java.awt.event.*;
          {
             public void actionPerformed(ActionEvent e)
             {               
-                if (frage1.RichtigeAntwort == "C" ) {
+                if (aktuelleFrage == "C" ) {
                oberflaeche.SpielFrame.setBackground(Color.GREEN);              
               }
               else {
@@ -237,8 +240,8 @@ import java.awt.event.*;
                    //AnzahlPunkte = AnzahlPunkte - 3;                    
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
-                Level = 2; 
-                spielen();
+                
+                Level = Level++;
             }
          });
          
@@ -246,7 +249,7 @@ import java.awt.event.*;
         {
             public void actionPerformed(ActionEvent e)
             {               
-                if (frage1.RichtigeAntwort == "D" ) { 
+                if (aktuelleFrage == "D" ) { 
                oberflaeche.SpielFrame.setBackground(Color.GREEN);
                //AnzahlPunkte = AnzahlPunkte + 5;                              
               }
@@ -254,10 +257,12 @@ import java.awt.event.*;
                    oberflaeche.SpielFrame.setBackground(Color.RED);                                      
                 }
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
-                Level = 2; 
-                spielen();
+                
+                Level = Level++;
             }
-        }); 
+        });
+        
+        
     }
     
     
