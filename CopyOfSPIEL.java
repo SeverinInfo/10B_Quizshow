@@ -18,7 +18,7 @@ import java.awt.event.*;
     FRAGE9 frage9;
     FRAGE10 frage10;
     String aktuelleFrage;
-    
+    int aktuellesLevel;
 
     
    CopyOfSPIEL()
@@ -38,7 +38,7 @@ import java.awt.event.*;
         Level = 1;
         aktuelleFrage = frage1.RichtigeAntwort;
         spielen();
-        
+        int aktuellesLevel = Level;
     }
    
     void spielen() {
@@ -54,7 +54,8 @@ import java.awt.event.*;
           oberflaeche.ansd.setText("D: " +frage1.Antt);
           oberflaeche.line10.setText("Level 1 <----");          
           aktuelleFrage = frage1.RichtigeAntwort;
-          checkLevel(); 
+          checkLevel();
+          getLevel();
         
         break;
         
@@ -70,6 +71,7 @@ import java.awt.event.*;
           oberflaeche.line10.setText("Level 1 ");
           aktuelleFrage = frage2.RichtigeAntwort;
           checkLevel();
+          getLevel();
         break;
        
       case 3:
@@ -83,6 +85,7 @@ import java.awt.event.*;
           oberflaeche.line9.setText("Level 2 ");
           aktuelleFrage = frage3.RichtigeAntwort;
           checkLevel();
+          getLevel();
         break;
        
     
@@ -97,6 +100,7 @@ import java.awt.event.*;
           oberflaeche.line8.setText("Level 3 ");
           aktuelleFrage = frage4.RichtigeAntwort;
           checkLevel();
+          getLevel();
         break;
        
       case 5:
@@ -110,6 +114,7 @@ import java.awt.event.*;
           oberflaeche.line7.setText("Level 4 ");
           aktuelleFrage = frage5.RichtigeAntwort;
           checkLevel();
+          getLevel();
        break;
        
       case 6:
@@ -122,7 +127,8 @@ import java.awt.event.*;
           oberflaeche.line5.setText("Level 6 <----");
           oberflaeche.line6.setText("Level 5 ");
           aktuelleFrage = frage6.RichtigeAntwort;
-          checkLevel();       
+          checkLevel();
+          getLevel();
         break;
        
       case 7:
@@ -149,6 +155,7 @@ import java.awt.event.*;
           oberflaeche.line4.setText("Level 7 ");
           aktuelleFrage = frage8.RichtigeAntwort;
           checkLevel();
+          getLevel();
         break;
        
      case 9:
@@ -162,6 +169,7 @@ import java.awt.event.*;
           oberflaeche.line3.setText("Level 8 ");
           aktuelleFrage = frage9.RichtigeAntwort;
           checkLevel();
+          getLevel();
        break;
        
      case 10:
@@ -174,7 +182,8 @@ import java.awt.event.*;
           oberflaeche.line1.setText("Level 10 <----");
           oberflaeche.line2.setText("Level 9 ");
           aktuelleFrage = frage10.RichtigeAntwort;
-          checkLevel();   
+          checkLevel();
+          getLevel();
         break;
        
        
@@ -207,7 +216,7 @@ import java.awt.event.*;
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 
                 Level = Level++;
-                
+                setLevel();
             }
          });
          
@@ -225,6 +234,7 @@ import java.awt.event.*;
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 
                 Level = Level++;
+                setLevel();
             }
          });
          
@@ -242,6 +252,7 @@ import java.awt.event.*;
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 
                 Level = Level++;
+                setLevel();
             }
          });
          
@@ -259,15 +270,23 @@ import java.awt.event.*;
                 oberflaeche.Score.setText("Punkte: " + AnzahlPunkte);
                 
                 Level = Level++;
+                setLevel();
             }
         });
         
         
     }
     
+    void setLevel() {
+        aktuellesLevel = Level; 
+    }
+    
+    void getLevel() {
+        Level = aktuellesLevel;
+    }
+    }
     
     
     
     
-    
-}
+
