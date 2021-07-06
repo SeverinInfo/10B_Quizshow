@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt. *;
 import java.awt.event.*;
 
- class OBERFLAECHE 
+  public class OBERFLAECHE 
  
 {
     Frame SpielFrame;
@@ -10,6 +10,7 @@ import java.awt.event.*;
     Frame StartFrame;
     Frame EndFrame;
     TIMER stoppuhr;
+    
     
     Label fragen;
     
@@ -163,6 +164,7 @@ import java.awt.event.*;
         EndFrame.add(gameOverLabel);
         EndFrame.add(gameOverButton);
         
+        
         startPlaying.setSize(80, 50);
         startPlaying.setVisible(true);
         startPlaying.setLocation(210, 180);
@@ -180,10 +182,12 @@ import java.awt.event.*;
         Information.setVisible(true);
         Information.setText("Informatikprojekt von : Cedric, Noah, Severin, Flora");
         
-        gameOverLabel.setSize(80,50);
-        gameOverLabel.setLocation(210, 200);
+        gameOverLabel.setSize(200,50);
+        gameOverLabel.setLocation(165, 200);
         gameOverLabel.setVisible(true);
-        gameOverLabel.setText("Well Played!");
+        gameOverLabel.setText("Well Played! You got ... " + "Points!");
+        
+        
         
         gameOverButton.setSize(80, 50);
         gameOverButton.setVisible(true);
@@ -518,6 +522,8 @@ import java.awt.event.*;
                 System.exit(1);
             }
         });
+        
+        
     }
 
     
