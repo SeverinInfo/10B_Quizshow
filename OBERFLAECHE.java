@@ -5,16 +5,16 @@ import java.awt.event.*;
   public class OBERFLAECHE 
  
 {
-    Frame SpielFrame;
+    Frame SpielFrame;          // ale frames 
     Frame EinstellungenFrame;
     Frame StartFrame;
     Frame EndFrame;
-    TIMER stoppuhr;
+    
     
     
     Label fragen;
     
-    Label line1;
+    Label line1;     //die zeilen für das scoreboard
     Label line2;
     Label line3;
     Label line4;
@@ -26,35 +26,35 @@ import java.awt.event.*;
     Label line10;
     Label Score;
     
-    Label Information;
-    Label gameOverLabel;
+    Label Information;         // label für information am anfang 
+    Label gameOverLabel;       // label für informationen am ende
     
-    Label ansa;
+    Label ansa;               // antwort label
     Label ansb;
     Label ansc;
     Label ansd;
     
-    Button buta;
+    Button buta;              // antwort buttons
     Button butb;
     Button butc;
     Button butd;
-        
-    Button blau;
+         
+    Button blau;           //farb buttons
     Button gelb;
     Button schwarz;
     Button weiß;
-    
-    Button Vollbild;
+        
+    Button Vollbild;             //größe buttons
     Button Verkleinert;    
     
-    Button EinstellungenButton;
+    Button EinstellungenButton;              // einstellungsbuttons 
     Button EinstellungenButtonStart;
-    Button end;
+    Button stopButton;
     Button startPlaying; 
     Button gameOverButton;
     
     
-    Color color;
+    
     
     OBERFLAECHE()
     {
@@ -63,7 +63,7 @@ import java.awt.event.*;
         EinstellungenFrame = new Frame();
         StartFrame = new Frame();
         EndFrame = new Frame();
-        stoppuhr = new TIMER();
+       
         
         line1 = new Label();
         line2 = new Label();
@@ -94,7 +94,7 @@ import java.awt.event.*;
         startPlaying = new Button();
         EinstellungenButton = new Button();
         EinstellungenButtonStart = new Button();
-        end = new Button();
+        stopButton = new Button();
         gameOverButton = new Button();
         
         blau = new Button();
@@ -116,7 +116,7 @@ import java.awt.event.*;
         SpielFrame.add(ansc);
         SpielFrame.add(ansd);        
         SpielFrame.add(EinstellungenButton);
-        SpielFrame.add(end);        
+        SpielFrame.add(stopButton);        
         SpielFrame.add(line1);
         SpielFrame.add(line2);
         SpielFrame.add(line3);
@@ -135,7 +135,7 @@ import java.awt.event.*;
         SpielFrame.setTitle("Quizspiel");
         SpielFrame.setLayout(null);
         SpielFrame.setBackground(Color.WHITE);
-        color = Color.WHITE;
+        
         
         // das Verkleinert der Einstellung 
         EinstellungenFrame.setSize(500,700);
@@ -312,17 +312,20 @@ import java.awt.event.*;
         buta.setLabel("A"); 
         buta.setEnabled(true);
         
+        
         butb.setSize(80, 50);
         butb.setLocation(810, 900);
         butb.setVisible (true);
         butb.setLabel("B"); 
         butb.setEnabled(true);
         
+        
         butc.setSize(80, 50);
         butc.setLocation(1030, 900);
         butc.setVisible (true);
         butc.setLabel("C"); 
         butc.setEnabled(true);
+        
         
         butd.setSize(80, 50);
         butd.setLocation(1235, 900);
@@ -342,17 +345,17 @@ import java.awt.event.*;
         EinstellungenButton.setLabel("Einstellungen");
         EinstellungenButton.setEnabled(true);
         
-        //Button zum Beenden
-        end.setSize(80,50);
-        end.setLocation(20, 101);
-        end.setVisible(true);
-        end.setLabel("stop");
-        end.setEnabled(true);
+        //Button zum Bee nden
+        stopButton.setSize(80,50);
+        stopButton.setLocation(20, 101);
+        stopButton.setVisible(true);
+        stopButton.setLabel("stop");
+        stopButton.setEnabled(true);
         
         
         
-        //Button zum Beenden
-        end.addActionListener(new ActionListener() 
+        //Button zum Bee nden
+        stopButton.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
@@ -403,7 +406,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 SpielFrame.setBackground(Color.BLUE);   
-                color = Color.BLUE;
+                
             }
         });
         gelb.addActionListener(new ActionListener() 
@@ -411,7 +414,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 SpielFrame.setBackground(Color.YELLOW);                
-                color = Color.YELLOW;
+                
             }
         });
         schwarz.addActionListener(new ActionListener() 
@@ -419,7 +422,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 SpielFrame.setBackground(Color.BLACK);                
-                color = Color.BLACK;
+                
             }
         });
         weiß.addActionListener(new ActionListener() 
@@ -427,7 +430,7 @@ import java.awt.event.*;
             public void actionPerformed(ActionEvent e)
             {
                 SpielFrame.setBackground(Color.WHITE);                
-                color = Color.WHITE;
+                
             }
         });
         Vollbild.addActionListener(new ActionListener() 
