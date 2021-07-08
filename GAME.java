@@ -21,7 +21,7 @@ public class GAME extends TIMER
         fragen[3] = new FRAGEN("Wieviele Planeten hat unser Sonnensystem ?","13","7","5","8", "D");
         fragen[4] = new FRAGEN("Wie hoch ist die Mehrwertsteuer in Deutschland ?","7%","19%","16%","9%","B");
         fragen[5] = new FRAGEN("Was ist die Hauptstadt von der Slowakai","Sofia","Bratislava","Prag","München", "B");
-        fragen[6] = new FRAGEN("In welchem Meer liegt Hawaii","Atlantischer Ozean","Pazifischer Ozean","Mittelmeer","Karibisches Meer", "A");
+        fragen[6] = new FRAGEN("In welchem Meer liegt Hawaii","Atlantischer Ozean","Pazifischer Ozean","Mittelmeer","Karibisches Meer", "B");
         fragen[7] = new FRAGEN("Was ist die näheste Schicht der Atmosphäre ?","Mesophäre","Troposphäre","Thermosphäre","Stratosphäre", "B");
         fragen[8] = new FRAGEN("Was ist das chemische Symbol für Blei ?","Pt","Bl","Ag", "Pb", "D");
         fragen[9] = new FRAGEN("Was ist das schwerste Element ?","Mg","Er","U","Ga", "C");
